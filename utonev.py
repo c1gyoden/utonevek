@@ -27,8 +27,14 @@ for a in lista:
     print(a)
 
 ferfiak = 0
+nok = 0
 for n in lista:
-    if n.nem == 'F':
-        if n.elso != '-':
+    if n.elso != '-':
+        if n.nem == 'F':
             ferfiak += int(n.elso)
+        else:
+            nok += int(n.elso)
+
 print(ferfiak, "személynek van férfi neve")
+print(nok, "személynek van női neve")
+print("Az ország népessége", ferfiak + nok, "fő")
