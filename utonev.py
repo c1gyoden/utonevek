@@ -16,6 +16,10 @@ lista = []
 
 for sor in fajl:
     sor = sor.strip().split(';')
+    for adat in sor:
+        if adat == '':
+            sor[sor.index(adat)] = '-'
+            
     lista.append(Utonev(sor[0], sor[1], sor[2], sor[3], sor[4], sor[5]))
 
 for a in lista:
