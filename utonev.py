@@ -26,15 +26,36 @@ for sor in fajl:
 for a in lista:
     print(a)
 
+print(len(lista), 'név adatai van a listában')
+
 ferfiak = 0
 nok = 0
+ujszfiuk = 0
+ujszlanyok = 0
 for n in lista:
     if n.elso != '-':
         if n.nem == 'F':
             ferfiak += int(n.elso)
+
         else:
             nok += int(n.elso)
 
+    if n.ujsz1 != '-':
+        if n.nem == 'F':
+            ujszfiuk += int(n.ujsz1)
+        else:
+            ujszlanyok += int(n.ujsz1)
+
+    if n.ujsz2 != '-':
+        if n.nem == 'F':
+            ujszfiuk += int(n.ujsz2)
+        else:
+            ujszlanyok += int(n.ujsz2)
+
+
 print(ferfiak, "személynek van férfi neve")
 print(nok, "személynek van női neve")
-print("Az ország népessége", ferfiak + nok, "fő")
+print("Az ország népessége", ferfiak + nok, "fő\n")
+
+print(ujszfiuk, 'újszülött fiú van')
+print(ujszlanyok, 'újszülött lány van')
