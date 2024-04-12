@@ -11,6 +11,7 @@ class Utonev:
         return f'Név: {self.nev}\nElső: {self.elso}\nMásodik: {self.masodik}\nUjsz1: {self.ujsz1}\nUjsz2: {self.ujsz2}\nNem: {self.nem}\n'
 
 fajl = open('utonev.txt', 'rt', encoding='ansi')
+fajl.readline()
 
 lista = []
 
@@ -19,7 +20,7 @@ for sor in fajl:
     for adat in sor:
         if adat == '':
             sor[sor.index(adat)] = '-'
-            
+
     lista.append(Utonev(sor[0], sor[1], sor[2], sor[3], sor[4], sor[5]))
 
 for a in lista:
