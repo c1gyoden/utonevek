@@ -26,4 +26,9 @@ for sor in fajl:
 for a in lista:
     print(a)
 
-    
+ferfiak = 0
+for n in lista:
+    if n.nem == 'F':
+        if n.elso != '-':
+            ferfiak += int(n.elso)
+print(ferfiak, "személynek van férfi neve")
